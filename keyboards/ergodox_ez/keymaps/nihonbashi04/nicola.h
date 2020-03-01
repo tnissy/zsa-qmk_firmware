@@ -27,7 +27,7 @@ bool process_nicola(uint16_t, keyrecord_t *);
 void set_nicola(uint8_t);
 
 typedef enum nicola_keycodes {
-  NG_Q = SAFE_RANGE,
+  NG_Q = EZ_SAFE_RANGE,
   NG_W,
   NG_E,
   NG_R,
@@ -64,6 +64,6 @@ typedef enum nicola_keycodes {
   NG_SHFTR,
 } NGKEYS;
 
-#define NG_SAFE_RANGE SAFE_RANGE+32
+#define NG_SAFE_RANGE EZ_SAFE_RANGE+32
 
 

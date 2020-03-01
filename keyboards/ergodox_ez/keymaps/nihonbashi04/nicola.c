@@ -247,8 +247,8 @@ void nicola_on(void) {
   nicola_clear();
   layer_on(nicola_layer);
 
-  tap_code(KC_LANG1); // Mac
-  tap_code(KC_HENK); // Win
+//  tap_code(KC_LANG1); // Mac
+  tap_code(KC_F14); // Win
 }
 
 void nicola_off(void) {
@@ -257,8 +257,8 @@ void nicola_off(void) {
   nicola_clear();
   layer_off(nicola_layer);
 
-  tap_code(KC_LANG2); // Mac
-  tap_code(KC_MHEN); // Win
+//  tap_code(KC_LANG2); // Mac
+  tap_code(KC_F13); // Win
 }
 
 // 親指シフトの状態
@@ -325,7 +325,7 @@ void nicola_mode(uint16_t keycode, keyrecord_t *record) {
   if (!is_nicola) return;
 
   // modifierが押されたらレイヤーをオフ
-  switch (keycode) {
+   switch (keycode) {
     case KC_LCTRL:
     case KC_LSHIFT:
     case KC_LALT:
@@ -334,6 +334,7 @@ void nicola_mode(uint16_t keycode, keyrecord_t *record) {
     case KC_RSHIFT:
     case KC_RALT:
     case KC_RGUI:
+    case MO(2):
       if (record->event.pressed) {
         n_modifier++;
         layer_off(nicola_layer);
