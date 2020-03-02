@@ -3,6 +3,7 @@
 LINK_TIME_OPTIMIZATION_ENABLE = yes
 COMMAND_ENABLE = no
 RGBLIGHT_ENABLE = no
+COMBO_ENABLE = yes
 
 # rules.mkでnicola.cをSRCに追加する。
 SRC +=  nicola.c \

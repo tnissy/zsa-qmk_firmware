@@ -334,7 +334,6 @@ void nicola_mode(uint16_t keycode, keyrecord_t *record) {
     case KC_RSHIFT:
     case KC_RALT:
     case KC_RGUI:
-    case MO(2):
       if (record->event.pressed) {
         n_modifier++;
         layer_off(nicola_layer);
