@@ -3,5 +3,5 @@
   See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
 */
 #define ORYX_CONFIGURATOR
-#define COMBO_COUNT 4
-#define COMBO_TERM 50
+#define COMBO_COUNT 9
+#define COMBO_TERM 40

@@ -32,6 +32,7 @@ typedef enum nicola_keycodes {
   NG_E,
   NG_R,
   NG_T,
+
   NG_Y,
   NG_U,
   NG_I,
