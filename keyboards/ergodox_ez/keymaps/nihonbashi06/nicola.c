@@ -275,9 +275,10 @@ void nicola_type(void) {
 
   switch (keycomb) {
     // send_stringできないキー、長すぎるマクロはここで定義
-    // case B_F|B_G:
-    //   nicola_off();
-    //   break;
+    case B_D|B_F:
+      send_string(SS_TAP(X_DOWN));
+      break;
+
     default:
       // キーから仮名に変換して出力する。
       // 同時押しの場合 ngmapに定義されている
