@@ -233,7 +233,16 @@ const PROGMEM nicola_keymap ngmap[] = {
   {.key = B_SHFTR|B_DOT     , .kana = "wa"},
   {.key = B_SHFTR|B_SLSH    , .kana = "lo"},
 
-};
+  // コンボ
+  {.key = B_F|B_G           , .kana = SS_TAP(X_RIGHT)},
+  {.key = B_S|B_D           , .kana = SS_TAP(X_LEFT)},
+  {.key = B_D|B_F           , .kana = SS_TAP(X_DOWN)},
+  {.key = B_E|B_R           , .kana = SS_TAP(X_UP)},
+  {.key = B_C|B_V           , .kana = SS_TAP(X_SPACE)},
+  {.key = B_J|B_K           , .kana = SS_TAP(X_PGDOWN)},
+  {.key = B_U|B_I           , .kana = SS_TAP(X_PGUP)},
+
+  };
 
 // 親指シフトのレイヤー、シフトキーを設定
 void set_nicola(uint8_t layer) {
@@ -275,8 +284,11 @@ void nicola_type(void) {
 
   switch (keycomb) {
     // send_stringできないキー、長すぎるマクロはここで定義
-    case B_D|B_F:
-      send_string(SS_TAP(X_DOWN));
+    case B_D|B_G:
+      send_string(SS_LSFT(SS_TAP(X_RIGHT)));
+      break;
+    case B_S|B_F:
+      send_string(SS_LSFT(SS_TAP(X_LEFT)));
       break;
 
     default:
