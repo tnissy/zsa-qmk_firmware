@@ -241,7 +241,8 @@ const PROGMEM nicola_keymap ngmap[] = {
   {.key = B_C|B_V           , .kana = SS_TAP(X_SPACE)},
   {.key = B_J|B_K           , .kana = SS_TAP(X_PGDOWN)},
   {.key = B_U|B_I           , .kana = SS_TAP(X_PGUP)},
-
+  {.key = B_W|B_E           , .kana = SS_TAP(X_HOME)},
+  {.key = B_R|B_T           , .kana = SS_TAP(X_END)}
   };
 
 // 親指シフトのレイヤー、シフトキーを設定
